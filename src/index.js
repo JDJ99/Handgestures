@@ -81,9 +81,9 @@ async function startLandmarkDetection(video) {
 
 //new gestures
 $("#peace").click(function(){
-    stop_peace=true
-    stop_metal=false
-    stop_nothing=false
+    stop_peace=false
+    stop_metal=true
+    stop_nothing=true
     $("#state").html("Wait 3 seconds")
     setTimeout(function(){
         trainpeace()
@@ -92,9 +92,9 @@ $("#peace").click(function(){
 })
 
 $("#metal").click(function(){
-    stop_peace=false
-    stop_metal=true
-    stop_nothing=false
+    stop_peace=true
+    stop_metal=false
+    stop_nothing=true
     $("#state").html("Wait 3 seconds")
     setTimeout(function(){
         trainmetal()
@@ -103,9 +103,9 @@ $("#metal").click(function(){
 })
 
 $("#nothing").click(function(){
-    stop_peace=false
-    stop_metal=false
-    stop_nothing=true
+    stop_peace=true
+    stop_metal=true
+    stop_nothing=false
     $("#state").html("Wait 3 seconds")
     setTimeout(function(){
         trainnothing()
